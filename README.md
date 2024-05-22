@@ -45,6 +45,8 @@ API_KEY=your-google-generative-ai-api-key
 ```sh
 npm start
 ```
+![image](https://github.com/Nandu-ramineni/Chat_AI/assets/123319320/efad126d-d303-4655-a658-e5ee739a9c37)
+![image](https://github.com/Nandu-ramineni/Chat_AI/assets/123319320/de5e7922-d8c1-445f-b831-3a4b81dae89d)
 
 The backend server should be running on `http://localhost:8000`.
 
