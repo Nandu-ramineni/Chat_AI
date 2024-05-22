@@ -1,17 +1,19 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { FcNfcSign, FcPanorama, FcFinePrint, FcPuzzle, FcSurvey } from "react-icons/fc";
 import { FiCopy } from 'react-icons/fi'; 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { DataContext } from '../../Context/DataProvider';
 
 const Home = () => {
     const [prompt, setPrompt] = useState('');
     const [responses, setResponses] = useState([]);
     const [loading, setLoading] = useState(false);
-
+    const {Account}= useContext(DataContext)
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
         setLoading(true);
         try {
             const response = await axios.post('http://localhost:8000/generate', { prompt });
@@ -23,7 +25,6 @@ const Home = () => {
         setLoading(false);
         setPrompt(''); 
     };
-
     const handleCopy = (text) => {
         navigator.clipboard.writeText(text)
             .then(() => {
@@ -83,7 +84,7 @@ const Home = () => {
                         </div>
                         <div className='px-4 py-8 rounded-md bg-[#EEEEEE] mx-2 border w-[150px] cursor-pointer hover:drop-shadow-md'>
                             <FcPuzzle className='text-xl' />
-                            <p>Design a fun code game</p>
+                            <p>Design a fun code game</p>  
                         </div>
                         <div className='px-4 py-8 rounded-md bg-[#EEEEEE] mx-2 border w-[150px] cursor-pointer hover:drop-shadow-md'>
                             <FcSurvey className='text-xl' />
