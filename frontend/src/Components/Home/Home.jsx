@@ -14,7 +14,7 @@ const Home = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const response = await axios.post('http://localhost:8000/generate', { prompt });
+            const response = await axios.post('https://chat-ai-1onk.onrender.com/generate', { prompt });
             const responseData = response.data;
             setResponses([...responses, responseData]);
         } catch (error) {
