@@ -36,7 +36,7 @@ const Login = () => {
     if (response.status === 200) {
       const templateParams = {
         to_email: signUp.email,
-        greeting: `Hello ${signUp.userName},`, // Corrected property name to userName
+        greeting: `Hello ${signUp.userName},`, 
         message: `Thank you for signing up! We're excited to have you on board.`,
       };
       emailjs.send('service_4xwezha', 'template_xnb3pxt', templateParams, 'Lm_Wni6iZVR4wdHdf')
