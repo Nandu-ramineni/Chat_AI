@@ -43,7 +43,7 @@ API_KEY=your-google-generative-ai-api-key
 4. Start the backend server:
 
 ```sh
-npm start
+npm run dev
 ```
 ![image](https://github.com/Nandu-ramineni/Chat_AI/assets/123319320/efad126d-d303-4655-a658-e5ee739a9c37)
 ![image](https://github.com/Nandu-ramineni/Chat_AI/assets/123319320/de5e7922-d8c1-445f-b831-3a4b81dae89d)
@@ -67,7 +67,7 @@ npm install
 3. Start the frontend development server:
 
 ```sh
-npm start
+npm run dev
 ```
 
 The frontend should be running on `http://localhost:3000`.
